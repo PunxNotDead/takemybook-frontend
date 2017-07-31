@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { delay } from 'redux-saga'
+import { delay } from 'redux-saga';
 
 import { BOOKS_FETCH_REQUESTED } from '../actions/books';
 import { loadBooksFailed, loadBooksDone } from '../actions/books';

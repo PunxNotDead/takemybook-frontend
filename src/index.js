@@ -24,6 +24,6 @@ render(Root);
 // Hot Module Replacement API
 if (module.hot) {
 	module.hot.accept('./components/Main', () => {
-		render(Root)
+		render(Root);
 	});
 }

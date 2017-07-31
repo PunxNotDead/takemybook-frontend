@@ -35,6 +35,8 @@ module.exports = {
 	devtool: 'inline-source-map',
 
 	devServer: {
+		historyApiFallback: true,
+
 		hot: true,
 		// enable HMR on the server
 
@@ -52,18 +54,16 @@ module.exports = {
 		},
 	},
 
-
-
 	module: {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				use: ['babel-loader',],
+				use: ['babel-loader', 'eslint-loader'],
 				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader?modules',],
+				use: ['style-loader', 'css-loader?modules'],
 			},
 			// the file-loader emits files.
 			{

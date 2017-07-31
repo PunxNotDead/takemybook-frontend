@@ -60,7 +60,7 @@ class BooksList extends Component {
 						)
 				}
 			</div>
-		)
+		);
 	}
 }
 
