@@ -1,0 +1,69 @@
+.loginBtn {
+  &--google {
+    display: flex;
+    align-items: center;
+
+    background: #4285F4;
+    color: #FFFFFF;
+    white-space: nowrap;
+    height: 42px;
+    border: none;
+  }
+
+  &--facebook {
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    color: #3b5998;
+    white-space: nowrap;
+    border: solid 1px #3b5998;
+    padding: 0px 8px;
+    height: 42px;
+  }
+
+  &__icon {
+    &--google {
+        background: url('/images/google.svg') transparent 50% no-repeat;
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+    }
+
+    &--facebook {
+        background: url('/images/facebook.png');
+        background-size: 26px 26px;
+        background-repeat: no-repeat;
+
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+    }
+  }
+
+  &__buttonText {
+    &--google {
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      width: calc(~"100% - 42px");
+      text-align: center;
+    }
+
+    &--facebook {
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      width: calc(~"100% - 34px");
+      text-align: center;
+    }
+  }
+}
+
+.loginBtn--google:hover {
+    cursor: pointer;
+}
