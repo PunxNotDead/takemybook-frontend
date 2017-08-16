@@ -20,41 +20,6 @@ class Register extends Component {
 		super(props);
 	}
 
-	componentDidMount() {
-		let auth2 = null;
-
-		let startApp = function() {
-			gapi.load('auth2', function() {
-			// Retrieve the singleton for the GoogleAuth library and set up the client.
-			auth2 = gapi.auth2.init({
-				client_id: '663608028282-qngrticdc4d8k24sbejp96l49bgde2uf.apps.googleusercontent.com',
-				cookiepolicy: 'single_host_origin',
-				// Request scopes in addition to 'profile' and 'email'
-				// scope: 'additional_scope'
-			});
-				attachSignin(document.getElementById('customBtn'));
-			});
-		};
-
-		function attachSignin(element) {
-			console.log(element.id);
-			auth2.attachClickHandler(element, {},
-				function(googleUser) {
-					console.log(googleUser.getBasicProfile().getName());
-					console.log(googleUser.getBasicProfile().getEmail());
-					console.log(googleUser.getBasicProfile());
-					}, function(error) {
-						alert(JSON.stringify(error, undefined, 2));
-					});
-		}
-
-		startApp();
-	}
-
-	google(event) {
-		console.log(event.target);
-	}
-
 	render() {
 		return (
 			<div className="container">
@@ -97,10 +62,10 @@ class Register extends Component {
 						or
 					</div>
 					<div className="col-xs-12 col-lg-3">
-						<div className="loginBtn--google" id="customBtn" onClick={this.google}>
+						<a className="loginBtn--google" href="/api/login/google">
 							<span className="loginBtn__icon--google"></span>
 							<span className="loginBtn__buttonText--google">Sign In with Google</span>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
